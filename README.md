@@ -58,5 +58,21 @@ This repository contains **no precomputed answers**. All predictions are
 generated at runtime by the trained model. We demonstrate this by evaluating on
 a held-out slice of data that was excluded from all training, with scores
 revealed live in the demo video. See `evaluate_hidden.py`.
-
 ## Project Structure
+data/                  training CSV (ai4i2020.csv) and hidden test CSV
+predictions/           leaderboard and unseen prediction outputs
+pipeline.py            full ML pipeline: EDA, features, CV, training, export
+app.py                 Streamlit web interface
+notebook.ipynb         narrated walkthrough of the methodology
+evaluate_hidden.py     hidden final evaluation (simulates hackathon test set)
+final_model.joblib     trained model bundle (features + threshold)
+requirements.txt       dependencies
+
+
+## How to Run
+
+```bash
+pip install -r requirements.txt
+python pipeline.py          # trains models, runs CV, saves final_model.joblib
+streamlit run app.py        # local version of the deployed app
+
