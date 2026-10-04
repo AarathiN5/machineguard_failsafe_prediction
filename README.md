@@ -68,6 +68,10 @@ evaluate_hidden.py     hidden final evaluation (simulates hackathon test set)
 final_model.joblib     trained model bundle (features + threshold)
 requirements.txt       dependencies
 
+## Tech Stack
+Python, pandas, NumPy, scikit-learn, XGBoost, LightGBM, Streamlit,
+Matplotlib, Seaborn, SHAP, GitHub, Streamlit Community Cloud.
+
 
 ## How to Run
 
